@@ -1,0 +1,37 @@
+<!-- <div class="row">
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userArray; let sr = index">
+          <td>{{ sr + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-12">
+    <app-void-table
+      [showActionButton]="true"
+      [tableData]="userArray"
+      [columnArray]="columnArray"
+      (onEdit)="editUser($event)"
+      (onDelete)="deleteUser($event)"
+    ></app-void-table>
+  </div>
+</div>
